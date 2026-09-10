@@ -84,3 +84,19 @@ A channel with one competitor and no visible buyers is an untested channel, not 
 **Target:** 3–5 flips/week, €100–€200/week profit, €1,000 in 6–10 weeks. Reviewed every 3 days.
 
 **Ledger:** the €150 enters as confirmed capital only when the operator states it is deposited.
+
+## 2026-09-10 — Session 6: operator chooses the store over flipping; €150 allocated
+
+**Operator:** prefers the online shop with social media traffic. Reaffirmed after the flipping case was made. Flipping parked (files kept, agent task 7 disabled).
+
+**€150 allocation:**
+| Item | € | When |
+|---|---|---|
+| .com domain | ~12 | Week 1 |
+| Samples: shower filter + pet roller | ~30 | Week 1, to operator's address |
+| Ad test reserve | 100 | Released only after 14 days of daily posting, spent €20/day × 5 days on the single best-performing video |
+| Buffer | ~8 | Refund/postage |
+
+**Sequence:** Week 1 setup + stock-footage videos daily. Week 2 samples arrive, refilm, keep posting. Week 3 ad test on the winner. Reviews every 3 days. Kill rules from the playbook stand: product with zero orders after 30 days is dropped; store with fewer than 3 orders after 60 days is killed and the decision log says so.
+
+**Honest EV restated:** most €100 ad tests do not pay back. The organic run before it is what gives the test a chance, because it tells us which product and hook to put money behind.

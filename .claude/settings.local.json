@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(sed -i 's/^| 1 | €100 | Not started — waiting on `INTAKE.md` |/| 1 | €100 | **Live** — CV rewrites \\(free channels\\) + selling owned items. Review 2026-09-17 |/' README.md)",
-      "Bash(git add *)",
-      "Bash(git -c user.name=skitalfml -c user.email=skitalfml@gmail.com commit -q -m 'Lock stage 1: CV rewrites via free channels plus selling owned items; grinds killed *)"
-    ]
-  }
-}

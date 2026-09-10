@@ -1,25 +1,19 @@
-# Daily actions — stage 1, week 1 (2026-09-10 to 2026-09-17)
+# Daily actions — ecommerce track, setup week (from 2026-09-10)
 
-Each item is one paste or one click. Tick it when done and paste me any replies. Total time: ~15 minutes/day.
+## One-time setup (do in order, each is a few clicks; full detail in `system/ecommerce_playbook.md`)
+- [ ] Confirm the €10 and deposit the €50. Reply with both amounts so the ledger is real.
+- [ ] Create a Stripe account (individual, Ireland, Revolut IBAN for payouts).
+- [ ] Make 3 Stripe Payment Links (€34.95 / €19.95 / €24.95, collect shipping address, Ireland only). Paste the 3 URLs to me.
+- [ ] Sign up to BigBuy or Spocket. Find the 3 products with EU stock. Paste me unit cost + shipping for each.
+- [ ] Order one shower-filter sample to yourself (~€15–20).
+- [ ] Buy a .com domain (~€12). Tell me the name.
+- [ ] Cloudflare Pages: connect this GitHub repo, output directory `shop`, add the domain.
+- [ ] Send me your trading name, address and contact email for the legal pages.
 
-## Day 1 (today)
-- [ ] **Confirm the €10.** Reply "€10 confirmed" so the ledger's first line is real.
-- [ ] **Post on LinkedIn** (copy from `offers/stage1_cv_offer.md`, section A). Once. Pin it.
-- [ ] **WhatsApp broadcast** to your contacts (section D of the same file). Once.
-- [ ] **Create a Revolut payment link** for €30 (Revolut app → Payments → Payment links). Paste it to me so I can put it in the reply templates.
-- [ ] **List 3 things you own but don't need** on Adverts.ie (free). Tell me what they are and I'll write the listing titles and descriptions. Photos from your phone.
+## Every day once live (~15 min)
+- [ ] Film and post one short video (script from me each Sunday).
+- [ ] Check Stripe for orders. For each: place supplier order, paste me the order number.
+- [ ] Paste me any customer messages. I draft every reply.
 
-## Day 2–7 (every day, ~10 min)
-- [ ] Open reddit.com/r/AskIreland, search "CV", sort by New. If someone asked for CV help in the last 24h, paste me the post text. I write a genuinely useful free reply that follows the sub's rules; you post it.
-- [ ] Check LinkedIn and WhatsApp for replies. Paste any to me. I write the response; you send it.
-- [ ] Check Adverts.ie messages on your listings. Paste to me. I handle the haggling script.
-- [ ] Any money received: tell me the amount and source. I add a ledger line; you confirm it.
-
-## When someone says yes to a CV
-1. Send them the 4 intake questions from `offers/stage1_cv_offer.md`.
-2. Send the Revolut link. Nothing is written before payment.
-3. Paste me their CV and target job ad. I return the finished CV, cover letter and delivery message within a few hours.
-4. You read it once (quality bar in `system/quality_bar.md`), then send.
-
-## Day 7 review (2026-09-17)
-I report cash in, cash out, enquiries, conversions, hours. Fewer than 2 paid CV orders → switch to the Google Business Profile offer. Two or more → double down.
+## Optional, still free
+- [ ] The LinkedIn CV post from `offers/stage1_cv_offer.md`. Zero cost, one paste.

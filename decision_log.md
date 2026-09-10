@@ -35,3 +35,17 @@ Every pivot, kill, or double-down goes here with the reason and the data behind 
 **Why not spend the €5 on anything:** no channel has shown a paying buyer yet. Spending before that is a guess, and the brief says sell before you build.
 
 **Expected value, honestly:** CV track: 10–20 enquiries needed for 4 orders at €30 to hit €100; free channels in Dublin may deliver that in 1–3 weeks or may deliver 1 order. Track 2 depends entirely on what the operator owns. Neither is certain. The 7-day review decides.
+
+## 2026-09-10 — Session 4: operator overrides stage 1 with a dropshipping store
+
+**What happened:** Operator rejected the service tracks and asked for an ecommerce store with dropshipped products, one page per product, own site with Stripe rather than Shopify. I laid out the odds (1–5% sustainable success, sub-15% beginner margins, ad budgets in the thousands, sources in `research/ecommerce_stage1.md`). Operator reaffirmed. That is their call and it is now the plan.
+
+**Capital:** Operator will add their own money, against the original brief. Asked for a number; answer was €500 for a real test, €150 organic floor. Operator chose **€50**. Recorded as pending in the ledger until deposited and confirmed. €50 covers domain, one sample and a refund buffer. It buys zero traffic; phase 1 is organic video only.
+
+**Built:** static store in `shop/` (home, three product pages, returns/terms/privacy/contact with CCPC-required placeholders), research file with product picks and supplier route, playbook with setup steps, fulfilment flow, content plan, kill rules and ad-unlock rule.
+
+**Products:** hard-water shower filter (Dublin angle, verified hardness ~177 mg/L), reusable pet-hair roller, satin pillowcase pair. Non-electrical, EU-warehouse only, so the supplier is the EU importer under GPSR and there is no €3 customs duty per parcel.
+
+**Service tracks:** paused, not killed. The LinkedIn CV post costs nothing and stays in the daily list as optional.
+
+**Review:** 2026-09-17 for setup completion; product kill at 30 days with zero orders; store kill at 60 days with fewer than 3 orders.

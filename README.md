@@ -19,7 +19,7 @@ One operator (Ireland), one computer, €10 starting capital. Money in the bank 
 
 | Stage | Target banked | Status |
 |---|---|---|
-| 1 | €100 | **Live** — CV rewrites (free channels) + selling owned items. Review 2026-09-17 |
+| 1 | €100 | **Live** — Slán Home dropshipping store (operator choice). Setup week; review 2026-09-17 |
 | 2 | €1,000 | Locked |
 | 3 | €5,000 | Locked |
 | 4 | €10,000 | Locked |

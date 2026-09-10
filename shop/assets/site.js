@@ -6,7 +6,7 @@
 
   /* ---------- Header / footer ---------- */
   const header = `
-  <div class="bar">Made to order in the EU · Free tracked delivery in Ireland · Proof before anything prints</div>
+  <div class="bar">Made in Dublin · Posted next working day · Proof before anything prints</div>
   <header class="site-head"><div class="wrap">
     <a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span>${S.brand || "Slán Home"}</a>
     <nav aria-label="Main">
@@ -34,7 +34,7 @@
         <a href="/legal/contact.html">Contact</a></p></div>
       <div><h4>Trader details</h4><p>${T.name || ""}<br>${T.address || ""}<br><a href="mailto:${T.email || ""}">${T.email || ""}</a>${T.phone ? "<br>" + T.phone : ""}</p></div>
     </div>
-    <p class="fine">Payments processed securely by Stripe. All prices include VAT and delivery to Ireland. © ${new Date().getFullYear()} ${T.name || S.brand || ""}.</p>
+    <p class="fine">Payments processed securely by Stripe. All prices include VAT and delivery in Ireland. © ${new Date().getFullYear()} ${T.name || S.brand || ""}.</p>
   </div></footer>`;
 
   document.querySelectorAll("[data-site-header]").forEach(el => el.outerHTML = header);

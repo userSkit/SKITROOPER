@@ -1,21 +1,22 @@
-# Daily actions — Slán Home, Irish gifts (pivot 2026-09-10)
+# Daily actions — Slán Home, local fast model (from 2026-09-10)
 
-## Today, in any order
+## Today, in any order (each a few clicks)
 - [ ] Reply with the capital actually set aside (€150) so the ledger confirms it.
-- [ ] Start the local agent (two PowerShell lines in the header of `system/local_agent.ps1`). It now prices Printful posters/mugs, scans Etsy competitors, and checks domains.
-- [ ] Stripe: individual account, Ireland, Revolut IBAN. Three Payment Links: Ogham print (€29.95 A4 / €39.95 A3 as two prices or a dropdown), Irish name print (€27.95 / €37.95), mug €18.95. On each link add a custom field "Name to print" or "Saying", collect shipping address, Ireland only. Paste me the URLs.
-- [ ] Create an Etsy shop (individual, Ireland). Expect a possible $15–29 setup fee; if it asks for more than €29, stop and tell me. Do not list yet; I write the listings.
-- [ ] Create the brand TikTok and Instagram accounts.
-- [ ] Send me your trading name, address and customer email for the legal pages.
+- [ ] Send me your trading name, address and customer email. I fill the site config.
+- [ ] Facebook account with Marketplace access, and an Adverts.ie account, both under your real name. Tell me when they exist; I give you the listing text and the image to upload.
+- [ ] Walk into or phone one Dublin copy shop (Copyprint, Colour Copy Centre, Reads, or any local one) and ask: price for one A4 colour print on 200–250 gsm matte card, same day. Tell me the number.
+- [ ] Buy two A4 frames (one black, one white) from IKEA, Dealz or Tiger. Tell me what they cost. These are for photos and the first framed orders.
+- [ ] Stripe: individual, Ireland, Revolut IBAN. Five Payment Links: Ogham posted €24.95, Ogham framed €39.95, Name print posted €22.95, Name print framed €37.95, Mug €18.95. Each with a custom field for the name or saying, shipping address collected, Ireland only. Paste me the URLs.
+- [ ] Cloudflare Pages connected to the repo, output directory `shop`. Send me the pages.dev address. Buy a .com when ready; tell me the name.
 
-## When the agent reports Printful costs
-- [ ] Create a Printful account (free) and connect it to Etsy. Order one sample A4 print (~€12) to your address for photos.
-- [ ] Buy a .com from the free list. Tell me the name. Connect Cloudflare Pages (output directory `shop`).
+## First listing day (as soon as Marketplace/Adverts accounts exist)
+- [ ] I send you: listing title, description, price, and a PNG of the design. You post it on Marketplace (Dublin, category Home & Garden → Home Décor or Gifts) and on Adverts.ie. Two listings each: Ogham print and Irish name print.
+- [ ] Screen-record the home page name preview for 15 seconds; post it on TikTok and Instagram with the caption I give you.
 
-## Every day once listings are live (~20 min)
-- [ ] Post one short video: the proof-to-print process, a name being set in Ogham, a mug in a Dublin kitchen. Scripts from me each Sunday.
-- [ ] Check Etsy and Stripe for orders. For each: I produce the print file and the proof email within 24 hours; you send the proof, and on "go" you place the Printful order.
-- [ ] Paste me every customer message. I draft every reply.
+## Every day (~20 min)
+- [ ] Paste me every Marketplace/Adverts message. I write the reply. Buyer pays by Revolut before printing; I produce the proof within hours; you send it; on "go" you print and post or deliver.
+- [ ] Post one short video (scripts from me each Sunday).
+- [ ] Tell me every euro in and out. I write the ledger line; you confirm.
 
 ## Kill rule
-No sales by 2026-11-30 → the decision log records a kill.
+No sales by 2026-10-31 → the decision log records a kill.

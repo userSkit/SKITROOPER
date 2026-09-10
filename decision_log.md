@@ -112,3 +112,15 @@ A channel with one competitor and no visible buyers is an untested channel, not 
 **Budget:** €150 per the table in the research file. Ad reserve €80, released only after organic proof.
 
 **Kill rule:** no sales by 2026-11-30 → kill and record.
+
+## 2026-09-10 — Session 8: operator says "too long"; switch to local production and local channels
+
+**Operator:** timeline to first sale (Etsy ramp, Printful sample, late-November kill date) is too slow for €150.
+
+**Decision:** same products, local model. Prints are produced at a Dublin copy shop on heavy card the day the proof is approved, posted next working day (An Post large envelope €3.50, Feb 2026 rates) or framed and hand-delivered in Dublin. Sold on Facebook Marketplace Dublin and Adverts.ie (both free, local, live in minutes), plus Instagram/TikTok and the site with Stripe. Nothing is printed until sold. Etsy and Printful move to phase 2 for national/diaspora reach. Mugs stay print-on-demand.
+
+**Prices:** A4 posted €24.95 (Ogham) / €22.95 (name print); A4 framed Dublin delivery €39.95 / €37.95; mug €18.95. Est. margins ~€19 posted, ~€30 framed. Frame source: IKEA RÖDALM (RIBBA discontinued) or Dealz/Tiger; price to confirm.
+
+**€150 now:** domain ~€12, five test prints ~€10, five frames ~€35, hard-backed envelopes and stamps ~€15, buffer ~€18, ad reserve €60 (unchanged rule: only after a video shows traction).
+
+**Expected time to first cash:** days to two weeks, because the buyers on Marketplace and Adverts are local and ready. Still not guaranteed. Kill date moves to 2026-10-31: no sales by then → kill.

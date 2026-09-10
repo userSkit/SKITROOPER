@@ -1,6 +1,6 @@
 # Tasks for the Claude Code session on the operator's PC
 
-> **Current priority (2026-09-10, after the pivot to Irish gifts): do tasks 10, 11, 12 in that order. Tasks 1–9 are superseded or disabled; skip them regardless of status. The store is the live plan; flipping is parked.**
+> **Current priority (2026-09-10, local fast model): do tasks 13, 12, 11, 10 in that order. Tasks 1–9 are superseded or disabled; skip them regardless of status.**
 
 You have normal internet access; the cloud session does not. Do these in order. Rules in `CLAUDE.md` apply: no logins, no purchases, no posting, no messaging. Read-only browsing plus edits inside this repo only.
 
@@ -50,3 +50,6 @@ On etsy.com public pages, search "ogham name print", "irish name meaning print",
 
 ## 12. Name and domain check for the pivot
 RDAP-check (https://rdap.org/domain/<name>.com) these: slanhome, slangifts, oghamandco, oghamprints, dublinprintco, saoltrainn, focalprints. Add three of your own. Record which are free in `research/local_tasks_results.md`. Search for existing shops using "Slán Home" or "Ogham & Co" on Etsy and the CRO register; note conflicts.
+
+## 13. Dublin local production costs (do first)
+Public web pages only, no login: (a) Copyprint.ie, colourcopycentre.ie, printdublin.ie, reads.ie: price for a single A4 colour print on 200–300 gsm matte card, and same-day availability; (b) IKEA Ireland: RÖDALM A4 (21×30) frame price, and any other A4 frame under €10; (c) Dealz.ie / Tiger (flyingtiger.com/ie): A4 frame prices if listed; (d) An Post: confirm large-envelope 101–250 g rate and whether a 200 gsm A4 in a hard-backed envelope fits the "large envelope" size limits (thickness limit). Write to `research/local_tasks_results.md` with links.

@@ -124,3 +124,17 @@ A channel with one competitor and no visible buyers is an untested channel, not 
 **€150 now:** domain ~€12, five test prints ~€10, five frames ~€35, hard-backed envelopes and stamps ~€15, buffer ~€18, ad reserve €60 (unchanged rule: only after a video shows traction).
 
 **Expected time to first cash:** days to two weeks, because the buyers on Marketplace and Adverts are local and ready. Still not guaranteed. Kill date moves to 2026-10-31: no sales by then → kill.
+
+## 2026-09-10 — Session 9: operator rejects the gift products; top-10 scan run
+
+**Operator:** does not like the personalised-gift idea, asked for a ranked list of best performers.
+
+**Produced:** `research/top10_scan.md` — ten options scored on time-to-cash, capital, AI-leverage, margin and ceiling, with cited Irish pricing.
+
+**Top three by score:** (1) social media management for Irish SMEs, 47/50 — the only recurring-revenue option, Irish agency floor is €900/mo so €400 undercuts hard, 38% of Irish businesses have no digital plan; (2) AI workflow automation, 45/50 — AI freelance hiring up 109% YoY, highest ceiling, needs one reference client; (3) website builds for sole traders, 43/50.
+
+**Flagged, not decided:** the recurring-revenue point is decisive for the €10k target. €10,000 = 22 client-months at €450. Every one-off product model requires selling from scratch every time.
+
+**Risk recorded plainly:** five models, zero accounts created, zero euro earned. The binding constraint is execution, not idea selection. Next model must produce one created account and one sent offer within 48 hours or the pattern repeats.
+
+**No spend. €150 intact. Gift site retained in `shop/` — it costs nothing to keep and is a portfolio piece for #1 and #3.**

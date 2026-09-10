@@ -1,32 +1,61 @@
 <!doctype html><html lang="en-IE"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Slán Home — personalised Irish gifts</title><meta name="description" content="Personalised Ogham name prints, Irish name meaning prints and Irish-slang mugs. Designed in Dublin, printed to order in the EU, delivered in about a week."><link rel="stylesheet" href="/style.css"></head><body>
-<div class="bar">Made to order · Printed in the EU, delivered to Ireland in about a week · 14-day returns on non-personalised items</div>
-<header><div class="wrap"><a class="brand" href="/">Slán Home</a><nav><a href="/#products">Shop</a><a href="/legal/returns.html">Returns</a><a href="/legal/contact.html">Contact</a></nav></div></header>
-
+<title>Slán Home — personalised Irish gifts, designed in Dublin</title>
+<meta name="description" content="Personalised Ogham name prints, Irish name meaning prints and Irish sayings mugs. Designed in Dublin, printed to order in the EU, free tracked delivery in Ireland.">
+<meta property="og:title" content="Slán Home — personalised Irish gifts"><meta property="og:description" content="Their name in a script older than English. Designed in Dublin, printed to order in the EU."><meta property="og:type" content="website">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css"><script src="/assets/config.js"></script></head><body>
+<div data-site-header></div>
 <main class="wrap">
-<section class="hero"><h1>Their name, in a script older than the English language.</h1>
-<p>Personalised Irish gifts designed in Dublin. Ogham name prints, Irish name meaning prints and mugs with the sayings you grew up with. Printed to order in the EU and at your door in about a week.</p>
-<a class="btn" href="#products">See the gifts</a></section>
+<section class="hero">
+  <div>
+    <h1>Their name, in a script older than the English language.</h1>
+    <p>Ogham was carved into standing stones across Ireland from the 4th century. We set your name in it, add its meaning, and print it to order in the EU. Free tracked delivery anywhere in Ireland.</p>
+    <div class="hero-try">
+      <label for="tryname">Try a name and watch it appear in Ogham:</label>
+      <input id="tryname" type="text" maxlength="12" placeholder="Saoirse" autocomplete="off">
+      <a class="btn" href="/products/ogham-name-print.html">Make mine</a>
+    </div>
+    <div class="badges"><span>Proof before printing</span><span>EU printed, no customs</span><span>Free IE delivery</span><span>Stripe secure checkout</span></div>
+  </div>
+  <div class="hero-art hero-ogham" data-ogham-preview="#tryname"></div>
+</section>
+
 <div class="trust">
-<div><strong>Made to order</strong>Every print is produced for you after you order. Nothing sits in a warehouse.</div>
-<div><strong>Printed in the EU</strong>No customs, no surprises. Ireland delivery in about a week, tracked.</div>
-<div><strong>Secure checkout</strong>Card, Apple Pay and Google Pay via Stripe. We never see your card details.</div>
+  <div><strong>Made for one person</strong>Every print is set by hand for the name you give us. Nothing is pre-printed.</div>
+  <div><strong>Printed in the EU</strong>Produced in Spain or Latvia, tracked to your door in about a week. No customs, no surprises.</div>
+  <div><strong>You approve first</strong>We email a proof within 24 hours. Nothing prints until you say go.</div>
+  <div><strong>Fair returns</strong>Mugs return within 14 days. Personalised prints are reprinted free if anything is wrong.</div>
 </div>
-<section id="products"><h2>The gifts</h2><div class="grid">
-<article class="card"><div class="ph">Print mock-up</div><div class="body"><h3>Ogham Name Print</h3><p>Any name written in Ogham, the ancient Irish stroke script, with the name, its meaning and a one-line explanation of the script. A4 or A3.</p><span class="price">from €29.95</span><a class="btn" href="/products/ogham-name-print.html">Personalise</a></div></article>
-<article class="card"><div class="ph">Print mock-up</div><div class="body"><h3>Irish Name Meaning Print</h3><p>Name, how to say it, what it means, where it comes from. For new babies, weddings, and anyone abroad who misses home. A4 or A3.</p><span class="price">from €27.95</span><a class="btn" href="/products/irish-name-print.html">Personalise</a></div></article>
-<article class="card"><div class="ph">Mug mock-up</div><div class="body"><h3>Irish Sayings Mug</h3><p>"Sure look." "Go on, go on, go on." "Grand, so." Pick the saying. Dishwasher-safe 11oz ceramic.</p><span class="price">€18.95</span><a class="btn" href="/products/irish-sayings-mug.html">Choose a saying</a></div></article>
+
+<section id="products"><h2>The gifts</h2><p class="lead">Three things, done properly. Prices include VAT and delivery to Ireland.</p>
+<div class="grid">
+  <article class="card"><div class="art" data-ogham-preview="#nope"></div><div class="body"><h3>Ogham Name Print</h3><p>Any name in the ancient Irish stroke script, with its meaning and a line on the script itself. A4 or A3, museum-grade matte paper.</p><span class="price">from <span data-price="ogham_a4">€29.95</span></span><a class="btn" href="/products/ogham-name-print.html">Personalise</a></div></article>
+  <article class="card"><div class="art" data-name-preview></div><div class="body"><h3>Irish Name Meaning Print</h3><p>Name, pronunciation, meaning and origin. For new babies, weddings and everyone abroad who misses home. A4 or A3.</p><span class="price">from <span data-price="name_a4">€27.95</span></span><a class="btn" href="/products/irish-name-print.html">Personalise</a></div></article>
+  <article class="card"><div class="art" data-mug-preview="#nope"></div><div class="body"><h3>Irish Sayings Mug</h3><p>"Sure look." "Grand, so." "Go on, go on, go on." Pick the one you actually say. 11oz ceramic, dishwasher safe.</p><span class="price"><span data-price="mug">€18.95</span></span><a class="btn" href="/products/irish-sayings-mug.html">Choose a saying</a></div></article>
 </div></section>
+
 <section><h2>How it works</h2><div class="steps">
-<div><span>1</span><strong>Personalise</strong><br>Type the name or pick the saying at checkout.</div>
-<div><span>2</span><strong>We design it</strong><br>Your print is set by hand, then sent to our EU printer within 1–2 working days.</div>
-<div><span>3</span><strong>Delivery</strong><br>Tracked to your door in about a week.</div>
-<div><span>4</span><strong>Guarantee</strong><br>Damaged or misprinted? We reprint free. Non-personalised items can be returned within 14 days.</div>
+  <div><span>1</span><strong>Personalise</strong><br>Type the name or pick the saying at checkout.</div>
+  <div><span>2</span><strong>Proof</strong><br>Within 24 hours you get a proof by email. Check the spelling, reply "go".</div>
+  <div><span>3</span><strong>Print</strong><br>Sent to our EU printer within 1–2 working days of your approval.</div>
+  <div><span>4</span><strong>Delivery</strong><br>Tracked to your door, about 5–8 working days. Free in Ireland.</div>
 </div></section>
+
+<section class="story"><div>
+  <h2>Why Ogham</h2>
+  <p class="lead">Ogham is the earliest written form of the Irish language. Around 400 stones survive, most of them in Kerry, Cork and Waterford, and nearly all of them say the same thing: a person's name. A name on stone was how you were remembered.</p>
+  <p>We think that is a better idea for a gift than most. Each print carries the name in Ogham, its meaning where one is recorded, and a plain-English line about the script, so the person receiving it knows what they are looking at. <a href="/about.html">Read the story</a>.</p>
+</div><div class="art"><div data-ogham-inline="Éire" data-color="#1f2a26"></div></div></section>
+
+<section class="faq"><h2>Questions people ask</h2>
+  <details><summary>Are the meanings accurate?</summary><p>We use standard references for Irish name origins. Where a meaning is uncertain or disputed, the print says so. Where a name has no recorded meaning, we say that rather than invent one.</p></details>
+  <details><summary>Can I return a personalised print?</summary><p>Under Irish law the 14-day change-of-mind right does not apply to personalised goods, which is why you approve a proof before anything prints. If a print arrives damaged or differs from the proof, we reprint it free or refund you.</p></details>
+  <details><summary>Do you ship outside Ireland?</summary><p>Ireland only for launch. UK and US next; message us and we will tell you when.</p></details>
+  <details><summary>Who are you?</summary><p>A one-person business in Dublin. Trader details are in the footer, as Irish consumer law requires. <a href="/legal/contact.html">Say hello</a>.</p></details>
+</section>
 </main>
-<footer><div class="wrap"><div class="cols">
-<div><h4>Slán Home</h4><p>Personalised Irish gifts, designed in Dublin, printed to order in the EU.</p></div>
-<div><h4>Help</h4><p><a href="/legal/returns.html">Returns &amp; cancellation</a><br><a href="/legal/terms.html">Terms of sale</a><br><a href="/legal/privacy.html">Privacy</a><br><a href="/legal/contact.html">Contact</a></p></div>
-<div><h4>Trader details</h4><p class="placeholder">TRADER NAME · TRADING ADDRESS, DUBLIN · EMAIL — required by Irish consumer law before going live.</p></div>
-</div><p>Payments processed securely by Stripe. Prices include VAT and delivery to Ireland.</p></div></footer>
+<div data-site-footer></div>
+<script src="/assets/site.js"></script>
 </body></html>

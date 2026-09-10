@@ -27,3 +27,6 @@ For the best listing found in task 1 for each product, list the product image UR
 
 ## 6. Record and push
 Write everything into `research/local_tasks_results.md` with links. Update `research/ecommerce_stage1.md` cost lines with real figures. Commit with a clear message and push to `claude/10-to-10k-business-8cf955`. If the push needs a credential prompt, stop and tell the operator to run the push from a normal PowerShell window.
+
+## Status tracking
+After finishing each numbered task, append a line to `system/local_tasks_status.md`. The cloud session reads that file and this one on a schedule and adds new tasks at the bottom. Tasks are numbered; do them in order; never redo one marked done.

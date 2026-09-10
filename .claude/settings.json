@@ -25,11 +25,12 @@
       "Bash(Get-Content:*)",
       "Bash(Get-ChildItem:*)",
       "Bash(pwd:*)",
-      "Bash(echo:*)"
+      "Bash(echo:*)",
+      "Bash(git push origin claude/10-to-10k-business-8cf955)",
+      "Bash(git pull --rebase origin claude/10-to-10k-business-8cf955)",
+      "Bash(git rebase --continue)"
     ],
-    "ask": [
-      "Bash(git push:*)"
-    ],
+    "ask": [],
     "deny": [
       "Read(~/.ssh/**)",
       "Read(~/.aws/**)",
@@ -93,15 +94,17 @@
       "Bash(pip:*)",
       "Bash(python:*)",
       "Bash(node:*)",
-      "Bash(git push --force:*)",
-      "Bash(git push -f:*)",
       "Bash(git reset --hard:*)",
       "Bash(git clean:*)",
       "Bash(git checkout -- .:*)",
       "Bash(cd ..:*)",
       "Bash(cd /:*)",
       "Bash(cd C:*)",
-      "Bash(cd ~:*)"
+      "Bash(cd ~:*)",
+      "Bash(git push --force:*)",
+      "Bash(git push -f:*)",
+      "Bash(git push origin main:*)",
+      "Bash(git push origin master:*)"
     ]
   }
 }

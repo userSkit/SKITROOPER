@@ -15,7 +15,7 @@ This repo is a one-person business system. The human operator handles all money,
 ## Allowed
 - Read and write files inside this repo.
 - Fetch public web pages for research and record findings with links.
-- Commit and push to the branch `claude/10-to-10k-business-8cf955` only, and only after asking.
+- Commit and push to the branch `claude/10-to-10k-business-8cf955` only. Never any other branch.
 
 ## If in doubt
 Stop and ask the operator. A blocked task is cheaper than a mistake.

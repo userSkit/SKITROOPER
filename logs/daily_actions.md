@@ -1,22 +1,21 @@
-# Daily actions — Slán Home store, setup week
+# Daily actions — Slán Home, Irish gifts (pivot 2026-09-10)
 
-## Today (each is a few clicks; do in any order)
-- [ ] Reply with the amount actually set aside (€150) so the ledger confirms it.
-- [ ] Start the local agent (two PowerShell lines in the header of `system/local_agent.ps1`). It finds supplier costs, free domains, stock clips and competitor hooks.
-- [ ] Stripe: individual account, Ireland, Revolut IBAN. Three Payment Links: €34.95 / €19.95 / €24.95, collect shipping address, Ireland only. Paste me the 3 URLs.
-- [ ] Create the brand TikTok and Instagram accounts. Bio line is in `offers/video_scripts_week1.md`.
+## Today, in any order
+- [ ] Reply with the capital actually set aside (€150) so the ledger confirms it.
+- [ ] Start the local agent (two PowerShell lines in the header of `system/local_agent.ps1`). It now prices Printful posters/mugs, scans Etsy competitors, and checks domains.
+- [ ] Stripe: individual account, Ireland, Revolut IBAN. Three Payment Links: Ogham print (€29.95 A4 / €39.95 A3 as two prices or a dropdown), Irish name print (€27.95 / €37.95), mug €18.95. On each link add a custom field "Name to print" or "Saying", collect shipping address, Ireland only. Paste me the URLs.
+- [ ] Create an Etsy shop (individual, Ireland). Expect a possible $15–29 setup fee; if it asks for more than €29, stop and tell me. Do not list yet; I write the listings.
+- [ ] Create the brand TikTok and Instagram accounts.
 - [ ] Send me your trading name, address and customer email for the legal pages.
 
-## When the agent reports supplier costs (usually same day)
-- [ ] Sign up to the supplier it found cheapest with EU stock.
-- [ ] Order samples of the shower filter and pet roller to your address (~€30 total).
-- [ ] Buy a .com from the free list it produces (~€12). Tell me the name.
-- [ ] Cloudflare Pages: connect the GitHub repo, output directory `shop`, add the domain.
+## When the agent reports Printful costs
+- [ ] Create a Printful account (free) and connect it to Etsy. Order one sample A4 print (~€12) to your address for photos.
+- [ ] Buy a .com from the free list. Tell me the name. Connect Cloudflare Pages (output directory `shop`).
 
-## Every day from Day 1 (~20 min)
-- [ ] Post one video (script in `offers/video_scripts_week1.md`; stock clip links get added by the agent). Same clip on TikTok and Reels.
-- [ ] Paste me the view counts every Sunday. Best hook gets three remakes, worst is dropped.
-- [ ] Check Stripe for orders. For each: place the supplier order, paste me the order number, send the dispatch email I draft.
+## Every day once listings are live (~20 min)
+- [ ] Post one short video: the proof-to-print process, a name being set in Ogham, a mug in a Dublin kitchen. Scripts from me each Sunday.
+- [ ] Check Etsy and Stripe for orders. For each: I produce the print file and the proof email within 24 hours; you send the proof, and on "go" you place the Printful order.
+- [ ] Paste me every customer message. I draft every reply.
 
-## Day 14
-- [ ] I pick the best video by views and saves. €100 ad test, €20/day × 5 days, on that one. Kill if cost per purchase exceeds gross margin after €60.
+## Kill rule
+No sales by 2026-11-30 → the decision log records a kill.

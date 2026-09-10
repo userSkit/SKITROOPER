@@ -100,3 +100,15 @@ A channel with one competitor and no visible buyers is an untested channel, not 
 **Sequence:** Week 1 setup + stock-footage videos daily. Week 2 samples arrive, refilm, keep posting. Week 3 ad test on the winner. Reviews every 3 days. Kill rules from the playbook stand: product with zero orders after 30 days is dropped; store with fewer than 3 orders after 60 days is killed and the decision log says so.
 
 **Honest EV restated:** most €100 ad tests do not pay back. The organic run before it is what gives the test a chance, because it tells us which product and hook to put money behind.
+
+## 2026-09-10 — Session 7: pivot the store to personalised Irish gifts (print-on-demand)
+
+**Operator:** "what can we do where we have an online shop selling something that's highly likely to do good" and "scan for the best performing items and services".
+
+**Scan result:** `research/best_performers.md`. Personalised Irish gifts (Ogham name print, Irish name meaning print, Irish-slang mug) rank first: proven Etsy demand, personalisation as a moat, EU print-on-demand, Q4 gifting in 8–12 weeks, and Etsy's own traffic replaces the ad budget the gadget store never had.
+
+**Decision:** Slán Home pivots from gadgets to Irish gifts. Sales channels in order: Etsy (traffic), own site (for social links, no fees), TikTok/Instagram content. Gadget products demoted; pages kept in git history only.
+
+**Budget:** €150 per the table in the research file. Ad reserve €80, released only after organic proof.
+
+**Kill rule:** no sales by 2026-11-30 → kill and record.

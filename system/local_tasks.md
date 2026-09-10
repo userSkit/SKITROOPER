@@ -5,7 +5,7 @@ You have normal internet access; the cloud session does not. Do these in order. 
 ## 0. Sync first
 Run `git pull --rebase origin claude/10-to-10k-business-8cf955`. The remote has moved ahead of your local commit 98da521. Resolve any conflict in `research/stage1.md` or `decision_log.md` by keeping both sides. Then continue; push at the end.
 
-## 1. Supplier costs for the three products (most important)
+## 1. Supplier costs for the three products — SUPERSEDED 2026-09-10 by task 10. Skip.
 For each product, find at least one listing and record: supplier, unit cost, shipping cost to Ireland, warehouse location (EU or China), delivery estimate, product page URL, and whether a media pack (photos/video licensed to resellers) is offered.
 - Hard-water shower filter (in-line, universal ½-inch, multi-stage cartridge)
 - Reusable pet-hair remover roller (chamber type, no refills)
@@ -34,8 +34,17 @@ After finishing each numbered task, append a line to `system/local_tasks_status.
 ## 7. Flip candidate scan — DISABLED 2026-09-10 (operator chose the store). Skip this task.
 Read `research/flipping_dublin.md`. Browse adverts.ie and donedeal.ie, Dublin only, in the target categories. For each item whose asking price is at or below 50% of comparable current listings, record in `research/flip_candidates.md`: date found, URL, title, asking price, 2 comparable listing URLs with prices, estimated resale, estimated profit, and any red flag. Aim for 10 candidates per run. Do not contact anyone, do not record seller names or phone numbers, do not log in.
 
-## 8. Competitor and hook research for the three products (after tasks 1–6)
+## 8. Competitor and hook research — SUPERSEDED by task 11. Skip.
 On TikTok and Instagram (public web pages, no login), search: "shower filter hard water", "pet hair remover roller", "satin pillowcase". For the 5 most-viewed public videos per product, record: URL, view count, the first-second hook (text or spoken), video length, and whether it shows the product in use. Write to `research/hooks_competitors.md`. Do not download or repost anything; this is for writing our own scripts.
 
-## 9. Supplier media pack check
+## 9. Supplier media pack check — SUPERSEDED. Skip.
 For each supplier listing chosen in task 1, record whether product photos/videos are offered to resellers and the stated licence terms. Paste URLs only. Write to `research/local_tasks_results.md`.
+
+## 10. Print-on-demand costs (highest priority now)
+On printful.com public product pages (no login), record for shipping to Ireland from an EU facility: (a) enhanced matte poster A4 and A3: base price + shipping; (b) 11oz white mug: base price + shipping; (c) production time. Also check printify.com public pages for an EU print provider for the same items. Write a cost table to `research/local_tasks_results.md` with links. Flag if any landed cost exceeds: A4 €12, A3 €15, mug €15.
+
+## 11. Etsy competitor scan for Irish gifts
+On etsy.com public pages, search "ogham name print", "irish name meaning print", "irish sayings mug". For the top 10 results per search record: listing URL, price, number of reviews, shop country, personalisation offered, delivery time stated. Write to `research/etsy_competitors.md`. Do not log in, favourite, or message anyone.
+
+## 12. Name and domain check for the pivot
+RDAP-check (https://rdap.org/domain/<name>.com) these: slanhome, slangifts, oghamandco, oghamprints, dublinprintco, saoltrainn, focalprints. Add three of your own. Record which are free in `research/local_tasks_results.md`. Search for existing shops using "Slán Home" or "Ogham & Co" on Etsy and the CRO register; note conflicts.

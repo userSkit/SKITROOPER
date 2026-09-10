@@ -1,5 +1,7 @@
 # Tasks for the Claude Code session on the operator's PC
 
+> **Current priority (2026-09-10, after the pivot to Irish gifts): do tasks 10, 11, 12 in that order. Tasks 1–9 are superseded or disabled; skip them regardless of status. The store is the live plan; flipping is parked.**
+
 You have normal internet access; the cloud session does not. Do these in order. Rules in `CLAUDE.md` apply: no logins, no purchases, no posting, no messaging. Read-only browsing plus edits inside this repo only.
 
 ## 0. Sync first

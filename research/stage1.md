@@ -71,6 +71,29 @@ From this environment I could **not** open Reddit, Boards.ie, Fiverr, Superprof 
 - **Airbnb listing rewrites:** Fiverr sellers charge $5–$125 (https://block.fiverr.com/gigs/airbnb-listing). Plausible, but finding Irish hosts to pitch without scraping or spamming is hard. Parked.
 - **Podcast show notes:** Fiverr range $5–$80 (https://block.fiverr.com/gigs/podcast-show-notes). Same problem: finding buyers without cold-spamming creators. Parked.
 
+## Demand check — session 2 results (2026-09-10, partial)
+
+Ran the check myself as far as this environment allows. Direct reads of Reddit, Adverts.ie, Boards.ie and Superprof are still blocked (proxy 403), so this is search-engine evidence only. What did come back:
+
+**CV service demand (supports candidate 1):**
+- Irish Times, 21 Aug 2026: under-35s struggling to find work despite a strong economy; youth unemployment roughly 12–14% — https://www.irishtimes.com/business/2026/08/21/why-are-young-people-struggling-to-find-work-despite-a-booming-labour-market/
+- TheJournal.ie, Feb 2026: "The 2026 graduate job hunt: not hopeless, but harder"; graduate roles attracting hundreds, sometimes thousands, of applicants — https://www.thejournal.ie/readme/workplace-ireland-job-hunt-6966246-Feb2026/
+- University Observer 2026: employers citing AI as a reason to hire fewer entry-level graduates — https://universityobserver.ie/graduating-in-2026-what-the-job-market-really-looks-like/
+- Boards.ie has multiple threads where people ask whether paid CV services are worth it, with the "yes" camp saying "best €100 you ever spend"; dates not visible from search — https://www.boards.ie/vbulletin/showthread.php?t=2056298669 , https://www.boards.ie/discussion/2056317568/professional-c-v-writing-services , https://www.boards.ie/discussion/2058330696/cv-writing
+- Trustpilot has a review page for cvwritingservice.ie, i.e. Irish people are paying these agencies — https://ie.trustpilot.com/review/www.cvwritingservice.ie
+
+Read: the buyer pool (job seekers under 35 sending many applications) is large and growing in 2026. Not yet verified: how many people ask for CV help on r/irishjobs in a given month. That count still needs a machine that can open Reddit.
+
+**Grinds demand (supports candidate 2):**
+- Irish Times, 1 Sep 2026: grind schools fully subscribed for incoming fifth years since June; one school's profit rose from €3m to €9m in three years — https://www.irishtimes.com/ireland/education/2026/09/01/my-daughters-classmates-have-left-for-a-grind-school-and-she-is-desperate-to-join-them/
+- Superprof Dublin averages: maths ~€25/hr, English ~€18/hr, French ~€25/hr, Irish ~€32/hr; ~493 tutors listed in Dublin — https://www.superprof.ie/lessons/mathematics/dublin/ , https://www.superprof.ie/lessons/irish/dublin/ , https://www.superprof.ie/lessons/french/dublin/
+- MyGrinds Ireland 1:1 from €30, 2:1 from €20 per student — https://mygrindsireland.ie/
+- Adverts.ie has a dedicated Grinds category under Services → Tuition & Classes — https://www.adverts.ie/services/tuition-classes/grinds/1328
+
+Read: demand is confirmed at the macro level and the timing is right. Competition on Superprof is heavy (hundreds of tutors in Dublin), so a listing there needs a specific recent grade to stand out. €25/hr online is the market rate, not a discount, so price at €25 and win on responsiveness and prep quality.
+
+**Still open:** the two counts that only a normal browser can produce — (a) CV-help posts on r/irishjobs in the last 30 days, (b) competing CV ads in Adverts.ie Services. See `system/local_demand_check.md` for the one-paste way to run these from your own PC.
+
 ## Tournament
 
 Scores 1–5 (5 best). Weights in brackets.

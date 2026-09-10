@@ -49,3 +49,26 @@ Every pivot, kill, or double-down goes here with the reason and the data behind 
 **Service tracks:** paused, not killed. The LinkedIn CV post costs nothing and stays in the daily list as optional.
 
 **Review:** 2026-09-17 for setup completion; product kill at 30 days with zero orders; store kill at 60 days with fewer than 3 orders.
+
+## 2026-09-10 — Local session: demand check evidence (record)
+
+**Status:** the evidence below stands. The recommendation at the end of it does not — it was written before the operator said they will not tutor, which killed grinds, and before the operator replaced stage 1 with the dropshipping store. Kept here because it is the only record of what was actually measured and where. The summary the plan acted on is in `research/stage1_local_summary.md`; the full write-up with links is in `research/stage1.md`.
+
+**What was run:** Option A from `system/local_demand_check.md`, from a local Claude Code session with browser access. Reddit read logged-out via its public JSON search endpoint, Adverts.ie and Boards.ie read directly. No login, no post, no spend. Full data and links in `research/stage1.md` under "Demand check — local results".
+
+**Decision 1: r/irishjobs is struck from the plan.** It is a Restricted subreddit with 29 weekly visitors and no posts in roughly seven years. The plan's free acquisition channel for CV work did not exist. r/AskIreland replaces it as the only live Irish room where people discuss CVs and job applications (15 CV-mentioning posts in the last 30 days, about 3 a week).
+
+**Recommendation 2 (superseded — operator will not tutor): move the €5 from a CV ad to a grinds ad.** The pass/fail rule wanted ≥5 CV-help asks in 30 days and <5 competing Adverts.ie ads at ≤€35.
+- Competition test: passed outright. Exactly one CV-writing ad exists on all of Adverts.ie, at €50.
+- Demand test: marginal. Four posts clearly meet the wording, seven if borderline cases are counted. Nobody offered to pay; one asked whether an AI-written CV is detectable, which is the free substitute at work.
+- Meanwhile Adverts.ie grinds has 18 ads for the whole country, two of them paid Premium listings, against grind schools that have been sold out since June.
+
+A channel with one competitor and no visible buyers is an untested channel, not an open goal. A channel with 18 competitors, two of whom pay for placement, is a channel with proven money in it. **The €5 is held for an Adverts.ie grinds ad and will be placed once intake Q6 names a subject and grade. The CV offer still runs, but only through free channels: r/AskIreland and LinkedIn.** (Superseded: grinds is off, and the €10 is untouched while the store runs on the operator's own €50.)
+
+**Decision 3: Boards.ie is dropped as both a signal and a channel.** Its Work & Jobs → Work Problems forum has had about four new threads since mid-August and none about CVs. The threads cited in session 2 are years old.
+
+**Repo location problem found and worked around.** The clone at `C:\WINDOWS\system32\SKITROOPER` is not writable without elevation, so no edit or commit can be made there. Work was done in a fresh clone at `C:\Users\<operator>\SKITROOPER`, which is what `system/local_safety.md` already recommends. Start Claude from that folder from now on and delete the system32 copy by hand.
+
+**Still blocked on intake at the time:** Q6 (tutoring subject and grade). Since answered: no tutoring, so the per-subject grinds count is moot.
+
+**Money:** still €10. Nothing spent.

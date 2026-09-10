@@ -1,5 +1,10 @@
 # Finish the demand check from your own PC (one paste)
 
+> **Done — 2026-09-10.** Option A was run from the operator's PC. Results, counts and links are in
+> `research/stage1.md` under "Demand check — local results", and the decisions they triggered are in
+> `decision_log.md` (session 3). The only piece left needs intake Q6: the per-subject grinds comparison.
+> Nothing below needs to be run again.
+
 The cloud session cannot open Reddit, Adverts.ie, Boards.ie or Superprof. Your PC can. Two options; pick one.
 
 ## Option A — Claude Code on your PC (lets Claude do it)

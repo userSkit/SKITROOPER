@@ -21,3 +21,17 @@ Every pivot, kill, or double-down goes here with the reason and the data behind 
 **Why not use a workaround:** Reddit mirrors and archive services are blocked too, and routing around the environment's own network policy is not something I will do. The honest path is a local session or a 10-minute manual check.
 
 **No change to provisional pick.** CV + cover letter remains the lead; grinds parallel if a subject exists. No money spent.
+
+## 2026-09-10 — Session 3: stage 1 locked
+
+**Operator facts:** Dublin. Has Revolut. Will not tutor. Hours unknown; assumed ~5/week until corrected.
+
+**Decision:** Grinds killed (operator constraint). Stage 1 runs two zero-cost tracks in parallel for 7 days:
+1. **CV + cover letter rewrite, €30, free channels only.** LinkedIn post once, honest free replies on r/AskIreland where rules allow, one WhatsApp broadcast. Claude drafts everything, operator pastes and sends. No ad spend: the local demand check found one competitor and no visible paying buyers, so the €5 stays in the bank.
+2. **Sell anything the operator owns and doesn't need on Adverts.ie / DoneDeal.** Free listings, Dublin pickup, Revolut payment. This is the fastest route to confirmed cash and it funds nothing but proves the ledger works.
+
+**Kill/switch rule (review 2026-09-17):** if track 1 has produced fewer than 2 paid orders by day 7, the free effort switches to a Google Business Profile fix-up offer (€75 one-off) for Dublin sole traders, researched by the local Claude session which can open business websites. That product was scored stage-2 material because it is slower, but it has a higher ticket and no competition at the sole-trader price point.
+
+**Why not spend the €5 on anything:** no channel has shown a paying buyer yet. Spending before that is a guess, and the brief says sell before you build.
+
+**Expected value, honestly:** CV track: 10–20 enquiries needed for 4 orders at €30 to hit €100; free channels in Dublin may deliver that in 1–3 weeks or may deliver 1 order. Track 2 depends entirely on what the operator owns. Neither is certain. The 7-day review decides.

@@ -72,3 +72,15 @@ A channel with one competitor and no visible buyers is an untested channel, not 
 **Still blocked on intake at the time:** Q6 (tutoring subject and grade). Since answered: no tutoring, so the per-subject grinds count is moot.
 
 **Money:** still €10. Nothing spent.
+
+## 2026-09-10 — Session 5: budget raised to €150; flipping becomes the cash engine
+
+**Operator:** "new budget 150, any better ideas to turn it into 1000".
+
+**Decision:** €150 goes to Dublin second-hand flipping (bikes, gaming, baby gear, tools, small furniture, phones), not ads. Rationale: at €150 an ad test is one five-day run on one product with negative expected value; flipping cycles cash in days with €20–€60 per item margins and zero platform cost. Store stays built and unspent; its first ad test is funded from flipping profit, per the "each stage funds the next" rule.
+
+**Local agent:** new recurring task scans public listings for underpriced items. No contact, no personal data.
+
+**Target:** 3–5 flips/week, €100–€200/week profit, €1,000 in 6–10 weeks. Reviewed every 3 days.
+
+**Ledger:** the €150 enters as confirmed capital only when the operator states it is deposited.

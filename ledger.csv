@@ -1,3 +1,3 @@
 date,item,cash_in_eur,cash_out_eur,running_balance_eur,confirmed,note
 2026-09-10,Starting capital,0.00,0.00,10.00,pending,Opening balance €10 — please confirm
-2026-09-10,Operator capital top-up (planned),0.00,0.00,10.00,pending,Operator said €50 — enters ledger only when deposited and confirmed
+2026-09-10,Operator capital top-up (planned),0.00,0.00,10.00,pending,Operator now says €150 — enters ledger only when deposited and confirmed

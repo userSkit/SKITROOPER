@@ -30,3 +30,6 @@ Write everything into `research/local_tasks_results.md` with links. Update `rese
 
 ## Status tracking
 After finishing each numbered task, append a line to `system/local_tasks_status.md`. The cloud session reads that file and this one on a schedule and adds new tasks at the bottom. Tasks are numbered; do them in order; never redo one marked done.
+
+## 7. Flip candidate scan (repeat every run once tasks 1–6 are done)
+Read `research/flipping_dublin.md`. Browse adverts.ie and donedeal.ie, Dublin only, in the target categories. For each item whose asking price is at or below 50% of comparable current listings, record in `research/flip_candidates.md`: date found, URL, title, asking price, 2 comparable listing URLs with prices, estimated resale, estimated profit, and any red flag. Aim for 10 candidates per run. Do not contact anyone, do not record seller names or phone numbers, do not log in.

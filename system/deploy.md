@@ -34,18 +34,38 @@ search rankings.
 
 ---
 
-## Step 3 — Cloudflare Pages, free, about ten minutes
+## Step 3 — hosting, free, about ten minutes
 
-1. Sign up at dash.cloudflare.com.
-2. **Workers & Pages → Create → Pages → Connect to Git**, and pick `userSkit/SKITROOPER`.
-3. Production branch: **`claude/10-to-10k-business-8cf955`**.
-   Build command: **leave it empty**. Build output directory: **`shop`**.
-4. Deploy. You get a working `*.pages.dev` address straight away.
-5. **Custom domains → add your domain.** If the domain is at Cloudflare this is automatic;
-   otherwise follow the two DNS records it shows you.
+**The one setting that matters, on any host: the site is in `shop/`, not at the repository
+root.** This repository is the whole business, so the root holds the ledger, the research and the
+playbook, and there is no `index.html` in it. Point the host at the root and every page returns
+"Page not found". That is the single most likely reason a deploy looks broken.
 
-There is no build step, no dependencies and nothing to install. The site is plain HTML, one
-stylesheet and two scripts, which is why it will still work in five years.
+### Netlify
+
+`netlify.toml` in the repository root already sets this, so a fresh site needs nothing typed in.
+
+1. Sign up at app.netlify.com.
+2. **Add new site → Import an existing project → GitHub**, and pick `userSkit/SKITROOPER`.
+3. Branch to deploy: **`claude/10-to-10k-business-8cf955`**.
+   Build command: **empty**. Publish directory: **`shop`**.
+4. Deploy. You get a working `*.netlify.app` address straight away.
+5. **Domain management → Add a domain**, then follow the DNS records it shows you.
+
+If a site was already created before `netlify.toml` existed, its saved settings win until you
+trigger a fresh deploy. Either **Site configuration → Build & deploy → Build settings** and set
+the publish directory to `shop` by hand, or **Deploys → Trigger deploy → Clear cache and deploy
+site** so it re-reads the file.
+
+### Cloudflare Pages, if you prefer it
+
+1. dash.cloudflare.com → **Workers & Pages → Create → Pages → Connect to Git**.
+2. Pick `userSkit/SKITROOPER`, production branch **`claude/10-to-10k-business-8cf955`**.
+3. Build command: **empty**. Build output directory: **`shop`**. Cloudflare ignores
+   `netlify.toml`, so this one has to be typed in.
+
+Either way there is no build step, no dependencies and nothing to install. The site is plain HTML,
+one stylesheet and two scripts, which is why it will still work in five years.
 
 ---
 
@@ -97,3 +117,25 @@ security surface. A cart becomes worth building at roughly twenty orders a week,
 
 **No newsletter signup.** Worth adding once there is something to send. An empty list sending
 nothing is worse than no list.
+
+---
+
+## If the deploy looks broken
+
+**"Page not found" on every page, including the home page.** The host is serving the repository
+root instead of `shop/`. Set the publish directory to `shop`. On Netlify this is already in
+`netlify.toml`, but a site created before that file existed keeps its old saved setting until you
+clear the cache and redeploy.
+
+**The home page works but every link 404s.** Same cause, caught halfway: the publish directory is
+right but the deploy is stale. Trigger a fresh deploy.
+
+**Pages load but there are no covers, no header and no footer.** `shop/assets/site.js` did not
+load. Open the browser console. Almost always the publish directory is a level too deep, so
+`/assets/site.js` resolves to nothing.
+
+**Prices show as `€42.00` and never change when you edit config.** Same thing: `config.js` is not
+loading. The numbers you are seeing are the fallback text in the HTML.
+
+**Everything works but the fonts look wrong.** Google Fonts is blocked or slow. The site falls back
+to Garamond and then Georgia, which is a deliberate fallback chain and not a bug.

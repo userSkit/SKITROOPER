@@ -1,0 +1,32 @@
+# Netlify configuration for Lampblack Press.
+#
+# This repository is the whole business, not just the website, so the site itself
+# lives in shop/. Without the publish setting below Netlify serves the repository
+# root, which has no index.html in it, and every page returns "Page not found".
+#
+# There is no build step. The site is plain HTML, one stylesheet and two scripts.
+
+[build]
+  publish = "shop"
+  command = ""
+
+# The designed 404 page at shop/404.html is picked up automatically.
+
+# The Slán Home gift pages were removed when the shop became a book press.
+# Anything still pointing at them lands on the collection instead of a dead end.
+[[redirects]]
+  from = "/products/*"
+  to = "/collection.html"
+  status = 301
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"

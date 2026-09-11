@@ -221,3 +221,9 @@ into the long-running branch, and points Cloudflare Pages at whichever one they 
 was deliberately left unedited; changing the operator's own standing rules is not Claude's call.
 
 **Money: still €0 spent.**
+
+**Branch conflict resolved (same day).** Operator chose `claude/10-to-10k-business-8cf955`, the
+branch named in `CLAUDE.md` and the only one on the remote. The session branch turned out to be
+that branch plus exactly one commit, so it fast-forwards with nothing to merge and nothing lost.
+Cloudflare Pages should watch `claude/10-to-10k-business-8cf955`. `CLAUDE.md` needs no change and
+`system/local_tasks.md` should name that branch when the local session syncs.

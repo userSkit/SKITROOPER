@@ -38,9 +38,7 @@ search rankings.
 
 1. Sign up at dash.cloudflare.com.
 2. **Workers & Pages → Create → Pages → Connect to Git**, and pick `userSkit/SKITROOPER`.
-3. Production branch: **`claude/peaceful-darwin-y7fsr7`** if you keep this session's branch, or
-   **`claude/10-to-10k-business-8cf955`** if you merge it back into the long-running one.
-   Point Cloudflare at whichever branch you decide to keep; see the note in `decision_log.md`.
+3. Production branch: **`claude/10-to-10k-business-8cf955`**.
    Build command: **leave it empty**. Build output directory: **`shop`**.
 4. Deploy. You get a working `*.pages.dev` address straight away.
 5. **Custom domains → add your domain.** If the domain is at Cloudflare this is automatic;

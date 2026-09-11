@@ -2,7 +2,7 @@
 
 > **Current priority (2026-09-11): do tasks 14 to 20, in that order. Tasks 1 to 13 are all superseded by the pivot to Lampblack Press; skip them regardless of status.**
 >
-> Sync first: `git pull --rebase origin <the branch this repo is on>` — see the branch note at the end of `decision_log.md`.
+> Sync first: `git pull --rebase origin claude/10-to-10k-business-8cf955`.
 
 You have normal internet access; the cloud session does not. Do these in order. Rules in `CLAUDE.md` apply: no logins, no purchases, no posting, no messaging. Read-only browsing plus edits inside this repo only.
 

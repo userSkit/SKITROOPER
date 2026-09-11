@@ -80,7 +80,7 @@ Berlin and to New York.
 
 Write the results into `research/sourcing_and_margins.md`, replacing the estimated table and
 removing the "(confirm)" markers. The working model to check against is
-`print ≈ €7.50 + €0.016 × pages`. **If real costs come in more than 15% above that, the €42 price
+`print ≈ €7.50 + €0.016 × pages`. **If real costs come in more than 15% above that, the €34 price
 is wrong and the margin table needs redoing before anything goes live.**
 
 ## 15. Lulu cover template dimensions
@@ -140,7 +140,7 @@ is charged on the fee, and whether Payment Links cost anything extra. Confirm th
 can carry a **custom field** (needed for "which three titles?") and can **collect a shipping
 address**. Record it in `system/lampblack_playbook.md`.
 
-If any of that is wrong, the €42 price and the whole checkout design need revisiting before launch.
+If any of that is wrong, the €34 price and the whole checkout design need revisiting before launch.
 
 ## Recording results
 

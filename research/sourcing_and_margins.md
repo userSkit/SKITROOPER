@@ -81,45 +81,71 @@ headline rate. There is no monthly fee and Payment Links cost nothing extra.
 **VAT on the books themselves is zero.** Printed books are zero-rated in Ireland, and have been for
 ebooks and audiobooks too since January 2024. The VAT registration threshold is €85,000 for goods,
 measured on a rolling twelve months. Below that you do not register, do not charge VAT, and do not
-file returns. For a business this size that removes an entire category of work — and it means €42
-of revenue is €42 of revenue, not €34 after VAT.
+file returns. For a business this size that removes an entire category of work — and it means €34
+of revenue is €34 of revenue, not €27.64 after VAT.
 
 ### Per-order economics
 
+Delivery is included in the price for Ireland and the EU, so these figures absorb the postage.
+Outside the EU it is charged at cost at checkout.
+
 | | Single | Three volumes | Six volumes | The full ten |
 |---|---|---|---|---|
-| Price | €42 | €108 | €198 | €310 |
+| Price | €34 | €93 | €174 | €280 |
+| Per book | €34.00 | €31.00 | €29.00 | €28.00 |
 | Print (avg €12.43/book) | €12.43 | €37.29 | €74.58 | €124.30 |
-| Shipping, one parcel | €6.50 | €11.00 | €16.00 | €22.00 |
-| Stripe (EEA card, inc. VAT) | €1.21 | €2.30 | €4.13 | €6.13 |
-| **Cost** | **€20.14** | **€50.59** | **€94.71** | **€152.43** |
-| **Gross profit** | **€21.86** | **€57.41** | **€103.29** | **€157.57** |
-| **Margin** | **52%** | **53%** | **52%** | **51%** |
+| Delivery, one parcel | €6.50 | €11.00 | €16.00 | €22.00 |
+| Stripe (EEA card, inc. VAT) | €0.94 | €2.02 | €3.52 | €5.47 |
+| **Cost** | **€19.87** | **€50.31** | **€94.10** | **€151.77** |
+| **Gross profit** | **€14.13** | **€42.69** | **€79.90** | **€128.23** |
+| **Margin** | **41.6%** | **45.9%** | **45.9%** | **45.8%** |
 
-Margin holds at roughly half the sale price across the range, which is the number to protect. If a
-decision drops it below 45%, do not make that decision.
+**The single is deliberately the thinnest margin on the page.** One book absorbs a whole parcel's
+postage, so €6.50 of delivery falls on €34 of revenue instead of being spread across six. That is
+not a flaw to fix by raising the price; it is the reason every page pushes the three-volume set.
 
-### Why the pricing ladder is built this way
+**Floor: 40%.** Any decision that takes an order below it is the wrong decision, including a
+discount that feels like it will win the sale.
 
-A single volume at €42 is priced so that the three-volume set at €108 is visibly better value —
-€36 a book instead of €42. The set is the product you actually want to sell, because it nearly
-triples the order value while the shipping and card fee barely move. The same parcel, the same two
-minutes of your time, €57 of profit instead of €22.
+### Why these prices and not higher ones
 
-This is also why *The Iliad* is in the collection despite unremarkable demand of its own. Nobody
-buys half of Homer, and a matching pair turns a €42 order into a €108 one.
+The first version of this priced a single volume at €42. That was wrong, and the reason is worth
+writing down: €42 is Folio Society money, and Folio Society has seventy-five years of reputation
+behind it. A new press with no reviews and no back catalogue does not get to charge that, however
+good the object is.
 
-Against the market, €42 sits between the mass-market premium classics (Wordsworth and Macmillan
-Collector's Library, €12–22) and the genuine collector presses (Folio Society and Easton Press,
-€50–150). That is the right gap: expensive enough to read as a gift object, cheap enough that
-someone buys it without deliberating for a week.
+The market actually looks like this:
+
+| Who | Typical price | What you get |
+|---|---|---|
+| Macmillan Collector's Library | €12–15 | Small format, printed paper case |
+| Wordsworth, Chiltern | €15–22 | Mass-market hardback |
+| Barnes & Noble leatherbound | €25–35 | Faux leather, gilt edges, the volume benchmark |
+| **Lampblack** | **€28–34** | Cloth-look case, gold stamping, named translation |
+| Folio Society, Easton Press | €50–150 | Genuine collector editions, decades of reputation |
+
+€34 sits just under the Barnes & Noble benchmark that people already know, and the sets take it to
+€28 a book. That is a price someone pays without deliberating for a week, which matters far more
+than the extra €8 when nobody has heard of you yet.
+
+The ladder is built so the three-volume set is visibly the sensible choice: €31 a book instead of
+€34, and free delivery either way. That set is the product you actually want to sell. It nearly
+triples the order value while the parcel and the card fee barely move, turning €14 of profit into
+€43 for the same two minutes of work.
+
+It is also why *The Iliad* is in the collection despite unremarkable demand of its own. Nobody buys
+half of Homer, and a matching pair turns a €34 order into a €93 one.
+
+**If the real print costs come in lower than the estimate, take the difference in margin, not in
+price.** At 41% on singles there is no room to cut further, and a price that moves twice in the
+first month reads as a brand that does not know what it is doing.
 
 ## The €150, allocated
 
 | Item | € | When |
 |---|---|---|
 | Domain, .com, first year | 11 | Day 1 |
-| Hosting — Cloudflare Pages, free tier | 0 | Day 1 |
+| Hosting — Netlify or Cloudflare Pages, free tier | 0 | Day 1 |
 | Stripe account | 0 | Day 1 |
 | Lulu account and ten title listings | 0 | Week 1 |
 | Two proof copies, printed and posted to you | 44 | Week 1 |
@@ -129,7 +155,7 @@ someone buys it without deliberating for a week.
 | Advertising reserve — **locked** | 60 | Released only on the rule below |
 | **Total** | **150** | |
 
-**The proof copies are not optional.** You are asking people for €42 for an object you have never
+**The proof copies are not optional.** You are asking people for €34 for an object you have never
 held. Order two — one short book and one long one — photograph them properly, and use those photos
 everywhere. It is the single highest-value €44 in the plan, and it is also your quality control: if
 the proof looks cheap, you find out for €44 instead of finding out through refund requests.
@@ -171,13 +197,14 @@ it is useful. Treated as a growth channel it is €60 gone.
 
 ## What "automatic annual income" would actually take
 
-Honest arithmetic, at a €85 average order and 52% margin:
+Honest arithmetic, at a €65 average order and 44% margin. That assumes a realistic mix of
+singles and three-volume sets; if sets are more than half of orders both columns rise.
 
 | Orders per week | Revenue/yr | Gross profit/yr | Your time |
 |---|---|---|---|
-| 1 | €4,420 | €2,300 | ~20 min/wk |
-| 3 | €13,260 | €6,900 | ~1 hr/wk |
-| 8 | €35,360 | €18,400 | ~2.5 hr/wk |
+| 1 | €3,380 | €1,487 | ~20 min/wk |
+| 3 | €10,140 | €4,462 | ~1 hr/wk |
+| 8 | €27,040 | €11,898 | ~2.5 hr/wk |
 
 The work per order is genuinely small — one order placed with the printer, about two minutes — and
 it stays small as volume grows, because the printer does the manufacturing, packing and posting.

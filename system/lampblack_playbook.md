@@ -8,10 +8,10 @@ Written 2026-09-11. Research behind it: `research/classics_top10.md` and
 
 ## What this business is, in four lines
 
-Ten out-of-copyright classics, set and cased as hardbacks, sold at €42 a volume and €108 for
+Ten out-of-copyright classics, set and cased as hardbacks, sold at €34 a volume and €93 for
 three. Printed one copy at a time by a print-on-demand press inside the EU, which ships direct
 to the customer in unbranded packaging. Payment by Stripe. No stock, no packing, no warehouse.
-Gross margin about 52%, and printed books carry no VAT in Ireland.
+Gross margin about 46% on sets and 41% on singles. Printed books carry no VAT in Ireland.
 
 ---
 
@@ -50,7 +50,7 @@ Use `system/cover-wrap.html` to produce the covers.
 
 **7. Order two proof copies.** About €44 including postage. Order the shortest book and the
 longest one, so you see both extremes of the binding. **Do not skip this and do not launch
-marketing before they arrive.** You are asking strangers for €42 for an object you have never
+marketing before they arrive.** You are asking strangers for €34 for an object you have never
 held.
 
 **8. Photograph the proofs.** A window, daylight, no flash, a plain surface. Fifteen photographs:
@@ -66,13 +66,13 @@ Payment Links cost nothing extra and need no code. Dashboard → Payment Links �
 
 | Link | Price | Custom field to add |
 |---|---|---|
-| One volume | €42.00 | "Which title?" (dropdown of the ten) |
-| Three volumes | €108.00 | "Which three titles?" (text) |
-| Six volumes | €198.00 | "Which six titles?" (text) |
-| The complete ten | €310.00 | none needed |
+| One volume | €34.00 | "Which title?" (dropdown of the ten) |
+| Three volumes | €93.00 | "Which three titles?" (text) |
+| Six volumes | €174.00 | "Which six titles?" (text) |
+| The complete ten | €280.00 | none needed |
 
 On every link, switch on **Collect customers' addresses → Shipping**, and set the countries you
-will ship to. Add shipping rates: charge at cost for single volumes, free for sets.
+will ship to. Add shipping rates: free for Ireland and the EU, charged at cost everywhere else.
 
 Paste the four URLs into the `stripe` block in `shop/assets/config.js` and redeploy. Until then
 every buy button reads "Checkout opening shortly" and points at the contact page, which is a
@@ -85,7 +85,7 @@ book page uses the single generic link and the custom field. Nothing on the site
 either way.
 
 **Fees:** 1.5% + €0.25 on EEA cards, 3.25% + €0.25 on everything else, plus Irish VAT at 23% on
-the fee itself. On a €42 sale that is €1.21. There is no monthly charge.
+the fee itself. On a €34 sale that is €0.94. There is no monthly charge.
 
 **VAT on the books:** none. Printed books are zero-rated in Ireland, and you are far below the
 €85,000 registration threshold. Do not register, do not charge it, do not file returns for it.
@@ -190,8 +190,8 @@ Record these weekly in `logs/ecommerce_metrics.csv`.
 | Product page views | same | Over half of all visits |
 | Orders | Stripe | The only one that counts |
 | Conversion | orders ÷ visitors | 1–2% is normal retail, 0.5% is survivable at this margin |
-| Average order value | Stripe | Above €80 means the sets are working |
-| Gross margin | `research/sourcing_and_margins.md` | Never below 45% |
+| Average order value | Stripe | Above €65 means the sets are working |
+| Gross margin | `research/sourcing_and_margins.md` | Never below 40% |
 | Pins published | Pinterest | 35 a week |
 
 ---
@@ -206,7 +206,7 @@ Written now, while nothing is at stake, so they cannot be argued with later.
   plainly. That is sixteen weeks, which spans the entire Christmas gifting season. If a classic
   books shop cannot sell three books in the run-up to Christmas, the problem is not the season.
 - **The advertising reserve is never released** except on the gate above.
-- **The margin floor is 45%.** Any decision that breaks it is the wrong decision, including a
+- **The margin floor is 40%.** Any decision that breaks it is the wrong decision, including a
   discount that feels like it will win a sale.
 
 ---

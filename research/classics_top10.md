@@ -142,7 +142,7 @@ seasonal spike every October that you can plan content around months ahead. 450 
 price accordingly or keep it to sets.
 
 **9. The Iliad.** Honestly, this is here for structural reasons rather than its own demand. Nobody
-buys one half of Homer. Stocking both turns a €42 sale into a €108 sale, and that is the entire
+buys one half of Homer. Stocking both turns a €34 sale into a €93 sale, and that is the entire
 argument for it.
 
 **10. Jane Eyre.** Consistently in the top five most-downloaded books on every public-domain

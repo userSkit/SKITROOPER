@@ -96,7 +96,7 @@ Open the live site on a phone and check all of this:
 - [ ] The shelf of book spines appears on the home page and the spines are different widths.
 - [ ] Tapping a spine opens that book's page.
 - [ ] Every one of the ten covers renders, with the title in gold.
-- [ ] Prices show as real numbers, not as `€42.00` frozen in the HTML. They come from `config.js`.
+- [ ] Prices show as real numbers, not as `€34.00` frozen in the HTML. They come from `config.js`.
 - [ ] Every footer link opens a real page.
 - [ ] No dashed red boxes remain anywhere. Each one marks something still to fill in.
 - [ ] The trader name and address in the footer are yours, not `TRADER NAME`.
@@ -134,7 +134,7 @@ right but the deploy is stale. Trigger a fresh deploy.
 load. Open the browser console. Almost always the publish directory is a level too deep, so
 `/assets/site.js` resolves to nothing.
 
-**Prices show as `€42.00` and never change when you edit config.** Same thing: `config.js` is not
+**Prices show as `€34.00` and never change when you edit config.** Same thing: `config.js` is not
 loading. The numbers you are seeing are the fallback text in the HTML.
 
 **Everything works but the fonts look wrong.** Google Fonts is blocked or slow. The site falls back

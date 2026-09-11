@@ -3,8 +3,8 @@
 One operator (Dublin), one computer, €150 of working capital. Money in the bank is the only metric.
 
 **Current business: Lampblack Press.** Ten out-of-copyright classics sold as cloth-cased hardbacks
-at €42 a volume, printed one copy at a time by a print-on-demand press inside the EU that ships
-direct to the customer. No stock, no packing, no warehouse. About 52% gross margin, and printed
+at €34 a volume, printed one copy at a time by a print-on-demand press inside the EU that ships
+direct to the customer. No stock, no packing, no warehouse. About 46% gross margin on sets, and printed
 books carry no VAT in Ireland.
 
 ## Start here

@@ -163,8 +163,8 @@
       return '<a href="' + n[0] + '"' + (here === n[0] ? ' aria-current="page"' : "") + ">" + n[1] + "</a>";
     }).join("");
 
-    return '<div class="strip">Printed to order, never in advance &middot; Free delivery over ' +
-      money((S.delivery && S.delivery.free) || 108) + '</div>' +
+    return '<div class="strip">Printed to order, never in advance &middot; Free delivery in ' +
+      ((S.delivery && S.delivery.freeText) || 'Ireland and the EU') + '</div>' +
       '<header class="masthead"><div class="wrap">' +
         '<a class="brand" href="/"><svg viewBox="0 0 24 20" aria-hidden="true">' + mark("#C3A05A") + '</svg>' +
         '<span class="brand-txt"><b>' + esc(S.brand || "Lampblack Press") + '</b>' +
@@ -242,7 +242,7 @@
           "<h3>" + esc(b.title) + "</h3>" +
           '<span class="by">' + esc(b.author) + "</span>" +
           '<span class="blurb">' + esc(b.blurb) + "</span>" +
-          '<span class="meta"><span>' + b.pages + " pp</span><span>" + money((S.prices && S.prices.single) || 42) + "</span></span>" +
+          '<span class="meta"><span>' + b.pages + " pp</span><span>" + money((S.prices && S.prices.single) || 34) + "</span></span>" +
           "</a>";
       }).join("");
     });

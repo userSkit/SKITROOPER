@@ -1,1 +1,6 @@
 .claude/settings.local.json
+
+# scratch files written while editing (this repo forbids writing outside itself,
+# and rm/mv are blocked, so strays are ignored rather than deleted)
+.tmp_*
+**/.tmp_*

@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lampblack — print-ready cover wrap generator</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#12100D;--paper:#F3EEE4;--gold:#8C6F32;--line:#DCD2C0}
+  *{box-sizing:border-box}
+  body{margin:0;background:#E9E2D4;color:var(--ink);font:15px/1.6 Inter,system-ui,sans-serif}
+  header{background:var(--ink);color:var(--paper);padding:1.5rem 2rem}
+  header h1{font:400 1.6rem/1.2 "Cormorant Garamond",serif;margin:0 0 .35rem}
+  header p{margin:0;color:#9B9083;font-size:.9rem;max-width:70ch}
+  .panel{padding:1.5rem 2rem;background:#FBF8F2;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:1.25rem;align-items:flex-end}
+  label{display:block;font:500 .6875rem/1 Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#6E6559;margin-bottom:.45rem}
+  select,input{font:inherit;padding:.6rem .7rem;border:1px solid var(--line);background:#fff;width:8.5rem}
+  select{width:15rem}
+  .warn{background:#FBF1EC;border:1px dashed #6B2320;color:#6B2320;padding:.9rem 1.1rem;margin:1.5rem 2rem;font-size:.875rem;max-width:80ch}
+  .warn b{font-weight:600}
+  .stage{padding:2rem;overflow:auto}
+  .sheet{background:#fff;box-shadow:0 10px 40px rgba(0,0,0,.18);display:inline-block}
+  button{font:500 .75rem/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:.95rem 1.6rem;border:1px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer}
+  .guides{font-size:.8rem;color:#6E6559;padding:0 2rem 2rem}
+  @media print{
+    header,.panel,.warn,.guides,button{display:none!important}
+    body{background:#fff}
+    .stage{padding:0;overflow:visible}
+    .sheet{box-shadow:none}
+    .foldguides{display:none!important}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Cover wrap generator</h1>
+  <p>Produces the back, spine and front of a case-wrap hardcover in one print-ready piece, using exactly the same artwork as the website. Set the numbers below, then print this page to PDF and upload the result to the printer.</p>
+</header>
+
+<div class="panel">
+  <div><label for="title">Title</label><select id="title"></select></div>
+  <div><label for="boardW">Board width mm</label><input id="boardW" type="number" value="146" step="0.5"></div>
+  <div><label for="boardH">Board height mm</label><input id="boardH" type="number" value="216" step="0.5"></div>
+  <div><label for="spine">Spine mm</label><input id="spine" type="number" value="21" step="0.5"></div>
+  <div><label for="wrapmm">Turn-in mm</label><input id="wrapmm" type="number" value="17" step="0.5"></div>
+  <div><label for="guides">Fold guides</label><select id="guides" style="width:9rem"><option value="on">Show</option><option value="off">Hide</option></select></div>
+  <div><button onclick="window.print()">Print to PDF</button></div>
+</div>
+
+<div class="warn">
+  <b>Take the four measurements from the printer, not from here.</b> Lulu and Bookvault both
+  generate a template for your exact page count and paper stock, and the spine width in particular
+  depends on the caliper of the paper you chose. The defaults above are a 146 &times; 216&nbsp;mm board
+  with a 21&nbsp;mm spine, which is roughly a 330-page book on cream uncoated stock. Download the real
+  template first, read the four numbers off it, type them in, and the artwork will fit it.
+</div>
+
+<div class="stage"><div class="sheet" id="sheet"></div></div>
+<p class="guides" id="dims"></p>
+
+<script src="../shop/assets/books.js"></script>
+<script src="../shop/assets/site.js"></script>
+<script>
+(function () {
+  "use strict";
+  var $ = function (id) { return document.getElementById(id); };
+  var BOOKS = window.BOOKS || [];
+
+  BOOKS.forEach(function (b, i) {
+    var o = document.createElement("option");
+    o.value = i; o.textContent = b.title + "  (" + b.pages + " pp)";
+    $("title").appendChild(o);
+  });
+
+  /* Rough spine estimate so the field is never empty and obviously wrong.
+     Text block at 400 pages per inch of stock, plus 6 mm for two boards. */
+  function suggestSpine(pages) { return Math.round(((pages / 400) * 25.4 + 6) * 2) / 2; }
+
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  /* Break a blurb into lines that fit a given width, for the back cover. */
+  function wrap(text, maxChars) {
+    var words = String(text).split(" "), lines = [], line = "";
+    words.forEach(function (w) {
+      if ((line + " " + w).trim().length > maxChars) { lines.push(line.trim()); line = w; }
+      else { line += " " + w; }
+    });
+    if (line.trim()) lines.push(line.trim());
+    return lines;
+  }
+
+  /* Re-tag the site's cover SVG as a nested SVG placed at real millimetre coordinates,
+     so the printed front is pixel-for-pixel the artwork customers saw on the site. */
+  function nest(svg, x, y, w, h, vb) {
+    return svg.replace(/^<svg[^>]*>/,
+      '<svg x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" viewBox="' + vb +
+      '" preserveAspectRatio="xMidYMid meet">');
+  }
+
+  function render() {
+    var b = BOOKS[+$("title").value] || BOOKS[0];
+    if (!b) return;
+    var bw = +$("boardW").value, bh = +$("boardH").value;
+    var sp = +$("spine").value, tw = +$("wrapmm").value;
+    var W = 2 * tw + 2 * bw + sp, H = 2 * tw + bh;
+    var showGuides = $("guides").value === "on";
+
+    var backX = tw, spineX = tw + bw, frontX = tw + bw + sp, topY = tw;
+    var safe = 12;                               /* keep type this far inside the board edge */
+    var surname = String(b.author).split(" ").pop().toUpperCase();
+
+    /* front cover: the site artwork, scaled to fit the board and centred */
+    var s = Math.min(bw / 340, bh / 520);
+    var fw = 340 * s, fh = 520 * s;
+    var front = nest(window.LP.coverSVG(b, {}), (frontX + (bw - fw) / 2).toFixed(2),
+                     (topY + (bh - fh) / 2).toFixed(2), fw.toFixed(2), fh.toFixed(2), "0 0 340 520");
+
+    /* spine: drawn natively in millimetres, because its proportions are set by the page count */
+    var stFs = Math.min(sp * 0.42, (bh - 90) / ((b.short || b.title).length * 0.58));
+    stFs = Math.max(3, Math.min(stFs, 7));
+    var spineArt =
+      '<line x1="' + (spineX + 2) + '" y1="' + (topY + 28) + '" x2="' + (spineX + sp - 2) + '" y2="' + (topY + 28) + '" stroke="#C3A05A" stroke-width=".5"/>' +
+      '<line x1="' + (spineX + 2) + '" y1="' + (topY + 30) + '" x2="' + (spineX + sp - 2) + '" y2="' + (topY + 30) + '" stroke="#C3A05A" stroke-width=".25"/>' +
+      '<line x1="' + (spineX + 2) + '" y1="' + (topY + bh - 28) + '" x2="' + (spineX + sp - 2) + '" y2="' + (topY + bh - 28) + '" stroke="#C3A05A" stroke-width=".5"/>' +
+      '<line x1="' + (spineX + 2) + '" y1="' + (topY + bh - 30) + '" x2="' + (spineX + sp - 2) + '" y2="' + (topY + bh - 30) + '" stroke="#C3A05A" stroke-width=".25"/>' +
+      '<text transform="translate(' + (spineX + sp / 2 + stFs * 0.35) + ' ' + (topY + bh / 2 - 8) + ') rotate(-90)" text-anchor="middle" ' +
+        'font-family="Cormorant Garamond,serif" font-size="' + stFs.toFixed(2) + '" letter-spacing="' + (stFs * 0.1).toFixed(2) + '" fill="#C3A05A">' +
+        esc(b.short || String(b.title).toUpperCase()) + '</text>' +
+      '<text transform="translate(' + (spineX + sp / 2 + 1) + ' ' + (topY + bh - 38) + ') rotate(-90)" ' +
+        'font-family="Inter,sans-serif" font-size="2.6" font-weight="500" letter-spacing=".7" fill="#C3A05A" opacity=".85">' +
+        esc(surname) + '</text>';
+
+    /* back cover */
+    var blurbLines = wrap(b.blurb, 42);
+    var back =
+      '<rect x="' + (backX + safe) + '" y="' + (topY + safe) + '" width="' + (bw - safe * 2) + '" height="' + (bh - safe * 2) + '" fill="none" stroke="#C3A05A" stroke-width=".4"/>' +
+      '<rect x="' + (backX + safe + 2.5) + '" y="' + (topY + safe + 2.5) + '" width="' + (bw - safe * 2 - 5) + '" height="' + (bh - safe * 2 - 5) + '" fill="none" stroke="#C3A05A" stroke-width=".2" opacity=".7"/>' +
+      blurbLines.map(function (l, i) {
+        return '<text x="' + (backX + bw / 2) + '" y="' + (topY + bh * 0.40 + i * 7) + '" text-anchor="middle" ' +
+          'font-family="Cormorant Garamond,serif" font-size="5" font-style="italic" fill="#C3A05A">' + esc(l) + '</text>';
+      }).join("") +
+      '<line x1="' + (backX + bw / 2 - 12) + '" y1="' + (topY + bh * 0.40 + blurbLines.length * 7 + 3) + '" x2="' + (backX + bw / 2 + 12) + '" y2="' + (topY + bh * 0.40 + blurbLines.length * 7 + 3) + '" stroke="#C3A05A" stroke-width=".4"/>' +
+      '<text x="' + (backX + bw / 2) + '" y="' + (topY + bh * 0.40 + blurbLines.length * 7 + 14) + '" text-anchor="middle" ' +
+        'font-family="Inter,sans-serif" font-size="2.8" font-weight="500" letter-spacing="1.1" fill="#C3A05A">' +
+        esc((b.translator ? "TRANSLATED BY " + b.translator.toUpperCase() + " · " : "") + b.edition) + '</text>' +
+      '<text x="' + (backX + bw / 2) + '" y="' + (topY + bh - safe - 20) + '" text-anchor="middle" ' +
+        'font-family="Inter,sans-serif" font-size="2.6" font-weight="500" letter-spacing="1.6" fill="#C3A05A" opacity=".9">LAMPBLACK PRESS</text>' +
+      '<text x="' + (backX + bw / 2) + '" y="' + (topY + bh - safe - 13) + '" text-anchor="middle" ' +
+        'font-family="Inter,sans-serif" font-size="2.2" letter-spacing=".6" fill="#C3A05A" opacity=".65">Printed to order &#183; No ISBN required for direct sales</text>';
+
+    var guides = showGuides
+      ? '<g class="foldguides" stroke="#00A3FF" stroke-width=".3" stroke-dasharray="2 2" fill="none">' +
+          '<rect x="' + tw + '" y="' + tw + '" width="' + (2 * bw + sp) + '" height="' + bh + '"/>' +
+          '<line x1="' + spineX + '" y1="' + tw + '" x2="' + spineX + '" y2="' + (tw + bh) + '"/>' +
+          '<line x1="' + frontX + '" y1="' + tw + '" x2="' + frontX + '" y2="' + (tw + bh) + '"/>' +
+        '</g>'
+      : "";
+
+    document.getElementById("sheet").innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" width="' + W + 'mm" height="' + H + 'mm" viewBox="0 0 ' + W + ' ' + H + '">' +
+        '<rect width="' + W + '" height="' + H + '" fill="' + b.cloth + '"/>' +
+        '<rect width="' + W + '" height="' + H + '" fill="url(#lp-weave)"/>' +
+        back + spineArt + front + guides +
+      '</svg>';
+
+    /* size the printed page to the artwork so nothing is scaled or clipped */
+    var st = document.getElementById("pagesize") || document.createElement("style");
+    st.id = "pagesize";
+    st.textContent = "@page{size:" + W + "mm " + H + "mm;margin:0}";
+    document.head.appendChild(st);
+
+    $("dims").textContent =
+      "Flat wrap " + W.toFixed(1) + " × " + H.toFixed(1) + " mm. " +
+      "Back " + bw + " mm, spine " + sp + " mm, front " + bw + " mm, turn-in " + tw + " mm all round. " +
+      "Suggested spine for " + b.pages + " pages: " + suggestSpine(b.pages) + " mm — replace it with the printer's figure.";
+  }
+
+  ["title", "boardW", "boardH", "spine", "wrapmm", "guides"].forEach(function (id) {
+    $(id).addEventListener("input", render);
+    $(id).addEventListener("change", render);
+  });
+  $("title").addEventListener("change", function () {
+    var b = BOOKS[+$("title").value];
+    if (b) $("spine").value = suggestSpine(b.pages);
+    render();
+  });
+
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", render);
+  else render();
+})();
+</script>
+</body>
+</html>

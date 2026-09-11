@@ -138,3 +138,86 @@ A channel with one competitor and no visible buyers is an untested channel, not 
 **Risk recorded plainly:** five models, zero accounts created, zero euro earned. The binding constraint is execution, not idea selection. Next model must produce one created account and one sent offer within 48 hours or the pattern repeats.
 
 **No spend. €150 intact. Gift site retained in `shop/` — it costs nothing to keep and is a portfolio piece for #1 and #3.**
+
+## 2026-09-11 — Session 10: classic books, print to order, luxury positioning
+
+**Operator:** wants an ecommerce shop selling classic books, Homer's Odyssey named specifically.
+Asked for the top ten best performers, a cheap way to fulfil them at a profit, a luxury premium
+brand, Stripe, and €150 covering everything including marketing. Goal stated as automatic annual
+income.
+
+**Decision: build it, as a print-to-order press.** €150 cannot buy inventory, so every model that
+needs stock is out before it starts. Print-on-demand is not the best option here, it is the only
+one: the customer pays first, the book is printed second, and nothing is ever bought before it is
+sold. Brand is **Lampblack Press**, after the soot that the best printing ink was made from.
+
+**Top ten, ranked and reasoned** in `research/classics_top10.md`. Scored on demand ×3, margin ×2,
+shelf appeal ×2 and rights safety ×3, rather than on reputation. Two findings drove the list:
+
+1. **Page count is the entire cost story.** Print-on-demand charges a binding fee plus a per-page
+   rate, so a 110-page book and a 520-page book earn wildly different money at the same price.
+   *Meditations* at 160 pages nets €6 more per copy than *Jane Eyre* at 520. The list is therefore
+   weighted to short famous books; six of the ten are under 300 pages.
+2. **Translations are the trap.** The text being out of copyright does not free the translation,
+   whose clock runs from the translator's death. Homer is Samuel Butler, 1898 and 1900, dead in
+   1902 and safe worldwide. Fagles is protected until 2079. Every product page names its
+   translator and date.
+
+**One title held back.** *The Art of War* scored third and is not on the site. Lionel Giles died in
+1958, so his translation is in copyright in the EU until 2029 even though the 1910 text is free in
+the US. *Wuthering Heights* takes the tenth slot until that is resolved. Flagged rather than
+guessed, because a guess here is a takedown.
+
+**Supplier: Lulu first, Bookvault later.** Lulu has no setup fee, no monthly fee, white-label
+shipping to 150 countries and prints inside the EU so EU customers pay no customs. Bookvault does
+real foiling from £2.50 a copy, which is what actually makes a book feel expensive, but it charges
+per title and per month. Move when there is revenue to move with.
+
+**Prices: €42 single, €108 for three, €198 for six, €310 for ten.** Gross margin holds at about 52%
+across the ladder after print, shipping and Stripe. The three-volume set is the product that
+matters: it nearly triples order value while shipping and card fees barely move, turning €22 of
+profit into €57 for the same two minutes of work. *The Iliad* is in the collection largely to make
+that maths work, since nobody buys half of Homer.
+
+**Two facts that materially help.** Printed books are zero-rated for VAT in Ireland and the
+registration threshold is €85,000, so no VAT is charged, collected or filed. And Stripe is
+1.5% + €0.25 on EEA cards with no monthly fee.
+
+**€150:** domain €11, two proof copies €44, refund buffer €35, advertising reserve €60 locked
+behind the usual gate of 100 visitors and one organic sale. The proof copies are the part not to
+skip; asking €42 for an object you have never held is how refunds happen.
+
+**Marketing: Pinterest first**, which is the non-obvious call. It is a search engine, so a pin
+returns traffic for months while an Instagram post is finished in two days. Compounding traffic is
+the only honest route to income that arrives in a week you did not work. SEO on "which translation
+should I read" second, because that research is already done. Etsy is phase two. Ads stay locked.
+
+**Built this session:** the full shop under `shop/` rebuilt as Lampblack Press — home, collection,
+sets, about, ten product pages, five legal pages, 404, sitemap; an SVG cover engine that draws
+every cover and spine from the catalogue, with spine thickness derived from real page count; and
+`system/cover-wrap.html`, which turns the same artwork into a print-ready back-spine-front wrap so
+the covers are not a blocking task. Old Slán Home gift pages removed.
+
+**Honest expected value.** At €85 average order and 52% margin, one order a week is about €2,300 a
+year and three a week is about €6,900. The fulfilment genuinely is close to automatic: two minutes
+per order, and it does not grow with volume. Demand is not automatic and nothing here makes it so.
+What €150 buys is a shop that is ready to take money at a margin that works, and then six months of
+posting pins.
+
+**Kill rule:** fewer than 3 orders by 2026-12-31 kills it, and this log says so plainly. That window
+covers the whole Christmas season.
+
+**The real risk, restated.** This repository now holds six business models and no revenue. The
+binding constraint has never been idea quality; it is that no account has ever been created and no
+offer has ever been sent. The test for this one is not the research. It is whether a Stripe account
+and a Lulu account exist within 48 hours. If they do not, the seventh model will not fix it either.
+
+**Branch conflict, flagged not resolved.** `CLAUDE.md` says to push only to
+`claude/10-to-10k-business-8cf955`, which is the only branch on the remote. This session was
+assigned `claude/peaceful-darwin-y7fsr7`, which is checked out locally and carries all of the old
+branch's history. Work is committed to the assigned branch because that is what the session was
+told to use, and creating a branch destroys nothing. The operator decides whether to merge it back
+into the long-running branch, and points Cloudflare Pages at whichever one they keep. `CLAUDE.md`
+was deliberately left unedited; changing the operator's own standing rules is not Claude's call.
+
+**Money: still €0 spent.**

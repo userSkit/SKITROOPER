@@ -1,6 +1,8 @@
 # Tasks for the Claude Code session on the operator's PC
 
-> **Current priority (2026-09-10, local fast model): do tasks 13, 12, 11, 10 in that order. Tasks 1–9 are superseded or disabled; skip them regardless of status.**
+> **Current priority (2026-09-11): do tasks 14 to 20, in that order. Tasks 1 to 13 are all superseded by the pivot to Lampblack Press; skip them regardless of status.**
+>
+> Sync first: `git pull --rebase origin <the branch this repo is on>` — see the branch note at the end of `decision_log.md`.
 
 You have normal internet access; the cloud session does not. Do these in order. Rules in `CLAUDE.md` apply: no logins, no purchases, no posting, no messaging. Read-only browsing plus edits inside this repo only.
 
@@ -53,3 +55,95 @@ RDAP-check (https://rdap.org/domain/<name>.com) these: slanhome, slangifts, ogha
 
 ## 13. Dublin local production costs (do first)
 Public web pages only, no login: (a) Copyprint.ie, colourcopycentre.ie, printdublin.ie, reads.ie: price for a single A4 colour print on 200–300 gsm matte card, and same-day availability; (b) IKEA Ireland: RÖDALM A4 (21×30) frame price, and any other A4 frame under €10; (c) Dealz.ie / Tiger (flyingtiger.com/ie): A4 frame prices if listed; (d) An Post: confirm large-envelope 101–250 g rate and whether a 200 gsm A4 in a hard-backed envelope fits the "large envelope" size limits (thickness limit). Write to `research/local_tasks_results.md` with links.
+
+---
+
+# Lampblack Press tasks (2026-09-11)
+
+Context: `research/classics_top10.md`, `research/sourcing_and_margins.md`,
+`system/lampblack_playbook.md`. The cloud session could not reach lulu.com, bookvault.app,
+stripe.com, gutenberg.org or standardebooks.org — the network policy on that environment blocks
+them — so every figure it produced from published pricing is marked as an estimate. Your job is to
+replace the estimates with real numbers. Same rules as always: no logins, no purchases, no posting,
+read-only browsing and edits inside this repo only.
+
+## 14. Confirm the real print cost (do this first, everything depends on it)
+
+Open Lulu's price calculator. Configure: **hardcover, case wrap, 14 × 21 cm (or nearest standard
+trim), black and white interior, cream uncoated paper, quantity 1**, shipping to Dublin.
+
+Get the printed cost and the shipping cost for each page count in the catalogue: 160, 200, 250,
+280, 330, 380, 380, 400, 450, 520.
+
+Then get the shipping cost for a **three-book parcel** and a **six-book parcel** to Dublin, to
+Berlin and to New York.
+
+Write the results into `research/sourcing_and_margins.md`, replacing the estimated table and
+removing the "(confirm)" markers. The working model to check against is
+`print ≈ €7.50 + €0.016 × pages`. **If real costs come in more than 15% above that, the €42 price
+is wrong and the margin table needs redoing before anything goes live.**
+
+## 15. Lulu cover template dimensions
+
+For the same specification, download Lulu's cover template for a 330-page book and read off:
+total wrap width, total wrap height, spine width, and the safety margin. Put those four numbers in
+`system/lampblack_playbook.md` under the Lulu section. They are the inputs to
+`system/cover-wrap.html`, which is otherwise guessing.
+
+Also record the spine width Lulu gives for 160 pages and for 520 pages, so the range is known.
+
+## 16. The Art of War rights question — this one is worth money
+
+`research/classics_top10.md` ranks *The Art of War* third on margin and demand, and it is off the
+site because of a rights question. Resolve it.
+
+Lionel Giles died in 1958. His 1910 translation is public domain in the United States. Under the EU
+life-plus-seventy rule it would be protected until 1 January 2029. Find out whether the 1910 text
+is nonetheless free in the EU, or whether it can be sold to US customers only until 2029.
+
+Check what Standard Ebooks and Project Gutenberg say about the edition's status, and look for any
+Irish or EU guidance on pre-1996 US public-domain works. **Record what you find with links, and do
+not make a judgement call on it.** If it is not clearly free, it stays off the site until 2029.
+
+## 17. Domain and brand conflict check
+
+Domains, using the public RDAP endpoint (`https://rdap.org/domain/<name>.com`, a 404 means
+unregistered): `lampblackpress`, `lampblack-press`, `thelampblackpress`, `lampblackbooks`.
+Also check `lampblack.press` and `lampblackpress.ie`.
+
+Brand conflicts: search the CRO register at core.cro.ie and the EUIPO trade mark search at
+euipo.europa.eu for "Lampblack" and "Lampblack Press". Record anything live in publishing or
+printing. Do not file or register anything.
+
+If there is a real conflict, say so loudly — renaming costs one line of `shop/assets/config.js`
+today and costs the domain, the Pinterest account and the search rankings after launch.
+
+## 18. Source texts
+
+For each of the ten titles, find the Standard Ebooks edition and record its URL. Confirm and quote
+their licence statement about commercial use. For any title Standard Ebooks does not have, find the
+Project Gutenberg edition and record the URL.
+
+Do not download anything yet. This is a list of where the text comes from, which also becomes the
+source note on each product page.
+
+## 19. Bookvault comparison
+
+Get Bookvault's real hardback print cost for the same specification, plus the cost of foiling and
+sprayed edges per copy, and the current setup fee per title. Put it beside the Lulu figures in
+`research/sourcing_and_margins.md`. This decides when it is worth moving, not whether to start there.
+
+## 20. Stripe check
+
+Confirm on stripe.com/ie/pricing: the EEA card rate, the international card rate, whether Irish VAT
+is charged on the fee, and whether Payment Links cost anything extra. Confirm that a Payment Link
+can carry a **custom field** (needed for "which three titles?") and can **collect a shipping
+address**. Record it in `system/lampblack_playbook.md`.
+
+If any of that is wrong, the €42 price and the whole checkout design need revisiting before launch.
+
+## Recording results
+
+Append findings to `research/local_tasks_results.md` with links, update the two research files in
+place where a figure changes, and add a line to `system/local_tasks_status.md` per completed task.
+Commit and push. If the push asks for a credential, stop and tell the operator.
